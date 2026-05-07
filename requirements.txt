@@ -11,7 +11,7 @@ plotly==5.18.0
 
 # Technical analysis
 ta==0.11.0
-ta-lib==0.4.28
+# ta-lib==0.4.28  # requires manual C library install, skipping for now
 
 # Database
 sqlalchemy==2.0.23
