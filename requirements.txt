@@ -49,3 +49,4 @@ xlrd==2.0.1
 
 # Personal additions
 jupyter==1.0.0  # for exploratory analysis in notebooks
+ipywidgets==8.1.1  # interactive widgets for jupyter notebooks
