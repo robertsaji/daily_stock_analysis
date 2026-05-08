@@ -52,3 +52,4 @@ jupyter==1.0.0  # for exploratory analysis in notebooks
 ipywidgets==8.1.1  # interactive widgets for jupyter notebooks
 nbconvert==7.11.0  # export notebooks to HTML/PDF for sharing notes
 rich==13.7.0  # pretty terminal output, useful when running scripts manually
+scipy==1.11.4  # statistical functions, useful for correlation analysis and normality tests
