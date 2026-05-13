@@ -27,6 +27,9 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+# Personal default watchlist - stocks I track regularly
+DEFAULT_SYMBOLS = ["AAPL", "NVDA", "MSFT", "VOO"]
+
 
 def parse_arguments() -> argparse.Namespace:
     """Parse command-line arguments for the stock analysis tool."""
@@ -44,7 +47,7 @@ Examples:
     parser.add_argument(
         "--symbols",
         nargs="+",
-        default=None,
+        default=DEFAULT_SYMBOLS,
         help="Stock ticker symbols to analyze (e.g., AAPL TSLA MSFT)",
     )
     parser.add_argument(
@@ -107,34 +110,4 @@ def run_analysis(args: argparse.Namespace) -> int:
 
         # TODO: Initialize components as they are built
         # from analysis.fetcher import StockDataFetcher
-        # from analysis.analyzer import StockAnalyzer
-        # from analysis.reporter import ReportGenerator
-
-        logger.info("Analysis pipeline completed successfully.")
-        return 0
-
-    except KeyboardInterrupt:
-        logger.warning("Analysis interrupted by user.")
-        return 130
-    except Exception as e:
-        logger.error(f"Analysis failed with error: {e}", exc_info=True)
-        return 1
-
-
-def main() -> None:
-    """Application entry point."""
-    args = parse_arguments()
-
-    if args.verbose:
-        logging.getLogger().setLevel(logging.DEBUG)
-        logger.debug("Verbose logging enabled.")
-
-    if args.dry_run:
-        logger.info("[DRY RUN] No files will be written.")
-
-    exit_code = run_analysis(args)
-    sys.exit(exit_code)
-
-
-if __name__ == "__main__":
-    main()
+        # from analys
