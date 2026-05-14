@@ -28,7 +28,8 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Personal default watchlist - stocks I track regularly
-DEFAULT_SYMBOLS = ["AAPL", "NVDA", "MSFT", "VOO"]
+# Added VTI and QQQ for broader market exposure alongside individual picks
+DEFAULT_SYMBOLS = ["AAPL", "NVDA", "MSFT", "VOO", "VTI", "QQQ"]
 
 
 def parse_arguments() -> argparse.Namespace:
@@ -108,6 +109,4 @@ def run_analysis(args: argparse.Namespace) -> int:
     try:
         setup_directories(args.output)
 
-        # TODO: Initialize components as they are built
-        # from analysis.fetcher import StockDataFetcher
-        # from analys
+        # TODO:
